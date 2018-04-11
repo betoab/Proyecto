@@ -1,0 +1,125 @@
+﻿@model NewsModel.Nota
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Nota</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Titulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Reportero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Reportero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Seccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Seccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Categoria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Categoria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ubicacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ubicacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Relevancia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Relevancia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Espacio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Espacio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Archivo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Archivo)            
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dimensiones)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dimensiones)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Precio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Precio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Privacidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Privacidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiarioImpreso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiarioImpreso)
+        </dd>
+
+    </dl>
+    <div>
+        <img src="@Url.Content(Model.Archivo)" width="640" height="427"/>
+    </div>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Notaid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

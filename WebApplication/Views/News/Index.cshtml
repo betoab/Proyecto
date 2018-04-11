@@ -1,0 +1,28 @@
+﻿@model List<NewsModel.Nota>
+@{
+    ViewBag.Title = "Index";
+}
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <th>Nota ID</th>
+        <th>Titulo</th>
+        <th>Reportero</th>
+        <th>Seccion</th>
+    </tr>
+    @foreach (var item in Model )
+    {
+        <tr>            
+            <td>@item.Titulo</td>
+            <td>@item.Reportero</td>
+            <td>@item.Seccion</td>
+            <td>@item.Fecha</td>
+            <td><a href="@Url.Action("Details","News",new {@id=item.Notaid })">Detalles</a></td>
+        </tr>
+    }
+</table>
+
+
+
+
+

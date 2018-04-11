@@ -1,0 +1,20 @@
+﻿@model List<NewsModel.Seccion>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <th>Seccion ID</th>
+        <th>Seccion</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.nombreSeccion</td>
+            <td><a href="@Url.Action("Details","Seccion",new {@id=item.seccionID })">Detalles</a></td>
+        </tr>
+    }
+</table>
